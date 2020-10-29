@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% translate 'Log in' %}{% endblock %}
+
+{% block content %}
+
+<h1>{% translate 'Log in' %}</h1>
+
+<form action="{{ app_path }}" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="{% translate 'Log in' %}">
+</form>
+
+<br>
+
+<a href="{% url 'authentication:join' %}">{% translate 'Create Account' %}</a>
+
+{% endblock %}

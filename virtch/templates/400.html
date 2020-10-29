@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans 'Bad Request' %}{% endblock %}
+
+{% block content %}
+  <h1>{% trans 'Bad Request' %}</h1>
+  <p>{% trans 'Your request was rejected by the server.' %}</p>
+{% endblock %}

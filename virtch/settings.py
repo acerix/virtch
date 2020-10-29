@@ -26,23 +26,32 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+SITE_HOSTNAME = 'virtch'
 
+ALLOWED_HOSTS = [SITE_HOSTNAME]
 
 # Application definition
 
 INSTALLED_APPS = [
+
+    # django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # virtch
+    'virtch',
+    'authentication',
+    'world',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware', # after session and cache, before common
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -119,3 +128,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/srv/http/virtch-static'
+
+# Media files (User uploaded)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/srv/http/virtch-media'
+
+
+
+# User model
+
+AUTH_USER_MODEL = 'world.User'
+
+
+# Hardening
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'
+CSRF_COOKIE_SAMESITE = 'Strict'
+
+# Content Security Policy Reports
+#CSP_REPORT_URI = reverse_lazy('csp-report')
+#CSP_REPORTS_EMAIL_ADMINS = False
+
