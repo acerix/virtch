@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # tailwind
+    'tailwind',
+    'theme',
+
     # virtch
     'virtch',
     'authentication',
@@ -123,6 +127,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Tailwind styles
+TAILWIND_APP_NAME = 'theme'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
