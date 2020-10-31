@@ -1,13 +1,33 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}{% trans 'Main Menu' %}{% endblock %}
+{% block title %}{% translate 'Main Menu' %}{% endblock %}
 
 {% block content %}
-  <h1>{% trans 'Main Menu' %}</h1>
-  <ul class="flex">
+<ul>
+  {% if request.user.is_authenticated %}
     <li class="mr-6">
-      <a class="text-blue-500 hover:text-blue-800" href="#">{% translate "Log in" %}</a>
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'world:play' 1 %}">{% translate "Play" %}</a>
     </li>
-  </ul>
+    <li class="mr-6">
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'world:reality_index' %}">{% translate "Browse Realities" %}</a>
+    </li>
+    <li class="mr-6">
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'world:update_profile' %}">{% translate "Define Identity" %}</a>
+    </li>
+    <li class="mr-6">
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'logout' %}">{% translate "Log out" %}</a>
+    </li>
+  {% else %}
+    <li class="mr-6">
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'world:play' 1 %}">{% translate "Spectate" %}</a>
+    </li>
+    <li class="mr-6">
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'login' %}">{% translate "Log in" %}</a>
+    </li>
+    <li class="mr-6">
+      <a class="text-blue-500 hover:text-blue-800" href="{% url 'join' %}">{% translate "Sign up" %}</a>
+    </li>
+  {% endif %}
+</ul>
 {% endblock %}

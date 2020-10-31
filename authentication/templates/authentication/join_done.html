@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+<p>{% translate 'Welcome! Have fun!' %}</p>
+<a href="{% url 'world:play' 1 %}">{% translate 'Play' %}</a>
+{% endblock %}

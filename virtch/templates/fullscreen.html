@@ -22,45 +22,19 @@
   <meta name="theme-color" content="#ffffff">
 
   <style>
-  .body-bg {
-      background-color: #9921e8;
-      background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
-  }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #canvas {
+      height: 100%;
+    }
   </style>
 
 </head>
-<body class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
-
-  {% block header %}
-    <header class="max-w-lg mx-auto">
-      <nav>
-        <a href="{% url 'world:main_menu' %}">
-          <img src="{% static 'images/virtch-logo-full.png' %}" alt="{% trans "Virtch.io" %}" style="height:103px;">
-        </a>
-      </nav>
-    </header>
-  {% endblock %}
-
-  {% block main %}
-    <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-      <section class="prose lg:prose-xl">
-        {% block content %}{% endblock %}
-      </section>
-    </main>
-  {% endblock %}
-
-  {% block footer %}
-    <footer class="max-w-lg mx-auto flex justify-center">
-      <a href="{% url 'contact' %}" class="hover:underline">{% trans "Contact" %}</a>
-      <span class="mx-3">•</span>
-      <a href="{% url 'privacy-policy' %}" class="hover:underline">{% trans "Privacy" %}</a>
-      <span class="mx-3">•</span>
-      <a href="{% url 'terms-of-use' %}" class="hover:underline">{% trans "Terms" %}</a>
-      <span class="mx-3">•</span>
-      © Virtch <time class="ml-1">{% now 'Y' %}</time>
-    </footer>
-  {% endblock %}
-
+<body>
+  {% block content %}{% endblock %}
 </body>
 </html>
 

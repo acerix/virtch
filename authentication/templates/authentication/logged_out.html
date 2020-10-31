@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h3 class="font-bold text-2xl">{{ title }}</h3>
+<p class="text-gray-600 pt-2">{% translate 'You are logged out.' %}</p>
+{% endblock %}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93334 270.93334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="virtch-logo-full.svg"
+   inkscape:export-filename="/srv/http/virtch/design/virtch-logo-full.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <rect
+       x="0.20675187"
+       y="0.14121047"
+       width="272.81803"
+       height="182.36717"
+       id="rect76" />
+    <rect
+       x="0.048723495"
+       y="-0.24366361"
+       width="220.00125"
+       height="271.83728"
+       id="rect70" />
+    <rect
+       x="-1.1114586"
+       y="-0.53953426"
+       width="272.72344"
+       height="271.75158"
+       id="rect60" />
+    <rect
+       x="-0.24855442"
+       y="-0.030221486"
+       width="271.46512"
+       height="270.28173"
+       id="rect48" />
+    <rect
+       x="-0.23835755"
+       y="0.19987706"
+       width="272.56873"
+       height="271.43946"
+       id="rect42" />
+    <rect
+       x="1.4790534"
+       y="0.20635969"
+       width="269.5858"
+       height="271.34176"
+       id="rect36" />
+    <rect
+       x="0.34277163"
+       y="0.28576606"
+       width="271.12295"
+       height="271.06802"
+       id="rect30" />
+    <rect
+       x="0.048723496"
+       y="-0.24366361"
+       width="220.00125"
+       height="271.83728"
+       id="rect70-3" />
+    <rect
+       x="0.048723496"
+       y="-0.24366361"
+       width="220.00125"
+       height="271.83728"
+       id="rect36-6" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-130"
+     inkscape:cy="674.28571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1033"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       id="text68"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:238.125px;line-height:1.25;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine Bold';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect70);fill:#800080;fill-opacity:1;stroke:none;"
+       transform="matrix(0.47373923,0,0,0.69686522,52.373614,118.21184)"><tspan
+         x="0.048828125"
+         y="216.2482"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:238.125px;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine Bold';fill:#800080">V</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text68-7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.3103px;line-height:1.25;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine Bold';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect70-3);fill:#800080;fill-opacity:1;stroke:none;"
+       transform="matrix(0.47373922,0,0,0.69686521,105.30263,228.64079)"><tspan
+         x="0.048828125"
+         y="60.042148"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.3103px;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine Bold';fill:#800080">irtch.io
+</tspan></tspan><tspan
+         x="0.048828125"
+         y="142.93003"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:66.3103px;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine Bold';fill:#800080">
+</tspan></tspan></text>
+  </g>
+</svg>

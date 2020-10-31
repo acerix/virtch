@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext as _
+from django.contrib.auth import get_user_model
 
 class User(AbstractUser):
     """
@@ -15,7 +16,7 @@ class Person(models.Model):
     """
     People in the virtch world are represented by this model.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = _('person')

@@ -6,13 +6,23 @@ from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import JavaScriptCatalog
 from django.views.generic.base import RedirectView
 from django.http import HttpResponse
-from django.contrib.auth import views as auth_views
+from django.contrib.auth.views import LoginView, LogoutView
+from authentication.views import JoinView
+from . import views as base_views
 
 urlpatterns = i18n_patterns(
     path('', include('world.urls'), name='world'),
+    path('about/', base_views.AboutView.as_view(), name='about'),
+    path('contact/', base_views.ContactView.as_view(), name='contact'),
+    path('privacy/', base_views.PrivacyPolicyView.as_view(), name='privacy-policy'),
+    path('terms/', base_views.TermsOfUseView.as_view(), name='terms-of-use'),
     path('auth/', include('authentication.urls'), name='auth'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+
+    # short urls
+    path('join/', JoinView.as_view(), name='join'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+
     path('admin/', admin.site.urls, name='admin'),
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
 )
