@@ -6,10 +6,9 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
-
 SITE_NAME = 'Virtch.io'
+
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # ======== MANAGER CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
@@ -163,4 +162,119 @@ CSRF_COOKIE_SAMESITE = 'Strict'
 # Content Security Policy Reports
 #CSP_REPORT_URI = reverse_lazy('csp-report')
 #CSP_REPORTS_EMAIL_ADMINS = False
+
+# ======== LOGGING CONFIGURATION (Lift)
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
+# A sample logging configuration. The only tangible logging
+# performed by this configuration is to send an email to
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+# LOGGING = {
+    # 'version': 1,
+    # 'disable_existing_loggers': False,
+    # 'filters': {
+        # 'require_debug_false': {
+            # '()': 'django.utils.log.RequireDebugFalse'
+        # }
+    # },
+    # 'handlers': {
+        # 'mail_admins': {
+            # 'level': 'ERROR',
+            # 'filters': ['require_debug_false'],
+            # 'class': 'django.utils.log.AdminEmailHandler'
+        # },
+    # },
+# }
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'formatters': {
+        'standard': {
+            'format': '[%(levelname)s] %(asctime)s PID %(process)d: %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+        'syslog': {
+            'format': '%(process)-5d %(thread)d %(name)-50s %(levelname)-8s %(message)s'
+        },
+    },
+    'handlers': {
+        'null': {
+            'class': 'logging.NullHandler',
+        },
+        'syslog': {
+         'level': 'DEBUG',
+         'class': 'logging.handlers.SysLogHandler',
+         'facility': 'local7',
+         'address': '/dev/log',
+         'formatter': 'syslog'
+       },
+        # 'debug': {
+            # 'level': 'DEBUG',
+            # 'filters': ['require_debug_true'],
+            # 'class': 'logging.handlers.TimedRotatingFileHandler',
+            # 'filename': '/var/log/uwsgi/virtch/debug.log',
+            # 'when': 'midnight',
+            # 'backupCount': 7,
+            # 'formatter': 'standard',
+        # },
+        # 'sql': {
+            # 'level': 'DEBUG',
+            # 'class': 'logging.handlers.TimedRotatingFileHandler',
+            # 'filename': '/var/log/uwsgi/virtch/sql.log',
+            # 'when': 'midnight',
+            # 'backupCount': 7,
+            # 'formatter': 'standard',
+        # },
+        'request_error': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': '/var/log/uwsgi/virtch/5xx.log',
+            'when': 'midnight',
+            'backupCount': 7,
+            'formatter': 'standard',
+        },        # },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        }
+    },
+    'loggers': {
+        # 'django': {
+            # 'handlers': ['debug'],
+            # 'level': 'DEBUG',
+            # 'propagate': True,
+        # },
+        # 'django.request': {
+            # 'handlers': ['request_warning', 'request_error', 'mail_admins' ],
+            # 'level': 'WARNING',
+            # 'propagate': True,
+        # },
+        #'django.db.backends': {
+        #    'handlers': ['sql',],
+        #    'level': 'DEBUG',
+        #    'propagate': False,
+        #},
+        # 'django.template': {
+            # 'handlers': ['template',],
+            # 'level': 'WARNING',
+            # 'propagate': False,
+        # },
+        # 'post_office': {
+            # 'handlers': ['post_office',],
+            # 'level': 'INFO'
+        # },
+    },
+}
+# # ======== END LOGGING CONFIGURATION
 

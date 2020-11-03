@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{% block title %}virtch{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-  {# from realfavicongenerator.net #}
   <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/' %}apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/' %}favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/' %}favicon-16x16.png">
@@ -20,18 +18,19 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="msapplication-config" content="{% static 'favicon/' %}browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    #canvas {
-      height: 100%;
-    }
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#main-canvas {
+    width: 100%;
+    height: 100%;
+}
   </style>
-
 </head>
 <body>
   {% block content %}{% endblock %}

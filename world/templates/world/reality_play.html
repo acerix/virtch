@@ -1,8 +1,9 @@
 {% extends 'fullscreen.html' %}
-{% load i18n %}
+{% load i18n static %}
 
 {% block title %}{% trans 'World' %}{% endblock %}
 
 {% block content %}
-  <canvas id="canvas" width="1920" height="1080"></canvas>
+  <canvas id='main-canvas'></canvas>
+  <script src='{% static 'js/app-v0.0.1.js' %}'></script>
 {% endblock %}

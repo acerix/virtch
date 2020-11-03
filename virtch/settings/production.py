@@ -22,7 +22,7 @@ DEBUG = False
 EMAIL_SUBJECT_PREFIX = '[%s] ' % SITE_NAME
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#server-email
-SERVER_EMAIL = 'no-reply@virtch.io'
+SERVER_EMAIL = 'no-reply@%s' % SITE_HOSTNAME
 DEFAULT_FROM_EMAIL = SERVER_EMAIL
 # ======== END EMAIL CONFIGURATION
 
