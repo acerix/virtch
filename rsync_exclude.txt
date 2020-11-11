@@ -5,3 +5,5 @@ rsync_exclude.txt
 deploy.sh
 .env
 db.sqlite3
+game/node_modules/.cache/
+game/ssl/
