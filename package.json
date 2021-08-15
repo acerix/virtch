@@ -1,0 +1,87 @@
+{
+  "private": true,
+  "name": "virtch",
+  "homepage": "https://virtch.io/",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "preact watch",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,mjs}' 'tests/**/*.{js,jsx,ts,tsx,mjs}'",
+    "test": "jest ./tests",
+    "build": "preact build",
+    "clean": "rm -rf build coverage",
+    "serve": "sirv build --port 8080 --cors --single",
+    "predeploy": "yarn clean && yarn lint && yarn test --watchAll=false --coverage && yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "tsconfigRootDir": ".",
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "extends": [
+      "preact",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ],
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "dependencies": {
+    "core-js": "*",
+    "preact": "*",
+    "preact-render-to-string": "*",
+    "preact-router": "*",
+    "react-helmet": "*",
+    "regenerator-runtime": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/eslint-parser": "*",
+    "@types/enzyme": "*",
+    "@types/jest": "*",
+    "@types/react-helmet": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "critters-webpack-plugin": "*",
+    "enzyme": "*",
+    "enzyme-adapter-preact-pure": "*",
+    "eslint": "*",
+    "eslint-config-preact": "*",
+    "gh-pages": "*",
+    "jest": "*",
+    "jest-preset-preact": "*",
+    "preact-cli": "*",
+    "sirv-cli": "*",
+    "typescript": "*"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.ts",
+      "<rootDir>/tests/__mocks__/setupTests.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/sw.js"
+    ]
+  }
+}

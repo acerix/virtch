@@ -1,0 +1,15 @@
+[
+	{
+		"url": "/",
+		"title": "Virtch.io",
+		"photo": "/assets/Virtch.webp"
+	},
+	{
+		"url": "/play/",
+		"title": "Play"
+	},
+	{
+		"url": "/404/",
+		"title": "Page Not Found"
+	}
+]
