@@ -5,7 +5,7 @@ import { Link } from 'preact-router/match'
 const Home: FunctionalComponent = () => {
   return (
     <section class="container">
-      <Helmet title="Virtch.io" />
+      <Helmet title="Home" />
       <div class="px-4 pt-5 my-5 text-center border-bottom">
         <h1 class="h4 fw-bold">Virtch.io</h1>
         <div class="col-lg-6 mx-auto">

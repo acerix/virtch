@@ -1,5 +1,5 @@
 import { FunctionalComponent, h } from 'preact'
-import { Router } from 'preact-router'
+import { Route, Router } from 'preact-router'
 import Helmet from 'react-helmet'
 
 import Home from '../routes/home'
@@ -45,6 +45,7 @@ const App: FunctionalComponent = () => {
         <Router>
           <Home path="/" />
           <Play path="/play/" />
+          <Route path="/play/:room/" component={Play} />
           <NotFound path="/404/" />
           <NotFound default />
         </Router>
