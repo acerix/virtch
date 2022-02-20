@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{M6X6:function(t,e,o){"use strict";o.r(e);var n=o("hosL"),c=o("Hrl7"),r=o("JBDq");e.default=function(){return Object(n.g)("section",{class:"container py-5"},Object(n.g)(c.a,{title:"Page Not Found"}),Object(n.g)("h1",null,"Page Not Found — Error 404"),Object(n.g)("p",null,"Why u do this?"),Object(n.g)(r.a,{href:"/"},"Go Home"))}}}]);
+//# sourceMappingURL=route-not-found.chunk.cea23.js.map
